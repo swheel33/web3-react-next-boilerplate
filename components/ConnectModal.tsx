@@ -27,7 +27,6 @@ export default function ConnectModal({accounts, chainId, ENSNames, isActive}: {
     const { isOpen, onOpen, onClose } = useDisclosure()
     return (
        <div>
-            {isActive && chainId !== 1 && <Button>Connect to Ethereum Mainnet</Button>}
             {!isActive && <Button onClick={onOpen}>Connect Wallet</Button>}
             {isActive && <Button>{ENSNames[0] ? ENSNames[0] : accounts[0]}</Button>}
             <Modal isOpen={isOpen && !isActive} onClose={onClose} size='xs'>
