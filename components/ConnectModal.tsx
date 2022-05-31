@@ -16,6 +16,7 @@ import {
     useDisclosure,
     VStack
   } from '@chakra-ui/react'
+  import truncateEthAddress from 'truncate-eth-address'
 
 
 export default function ConnectModal({accounts, chainId, ENSNames, isActive}: {
@@ -28,7 +29,7 @@ export default function ConnectModal({accounts, chainId, ENSNames, isActive}: {
     return (
        <div>
             {!isActive && <Button onClick={onOpen}>Connect Wallet</Button>}
-            {isActive && <Button>{ENSNames[0] ? ENSNames[0] : accounts[0]}</Button>}
+            {isActive && <Button>{ENSNames[0] ? ENSNames[0] : truncateEthAddress(accounts[0])}</Button>}
             <Modal isOpen={isOpen && !isActive} onClose={onClose} size='xs'>
                 <ModalOverlay />
                 <ModalContent>
