@@ -42,22 +42,26 @@ export default function App() {
     let accounts;
     let ENSNames;
     let isActive;
+    let provider;
 
     if (isActiveMM) {
         chainId = chainIdMM;
         accounts = accountsMM;
         ENSNames = ENSNamesMM;
         isActive = isActiveMM;
+        provider = providerMM;
     } else if (isActiveCB) {
         chainId = chainIdCB;
         accounts = accountsCB;
         ENSNames = ENSNamesCB;
         isActive = isActiveCB;
+        provider = providerCB;
     } else if (isActiveWC) {
         chainId = chainIdWC;
         accounts = accountsWC;
         ENSNames = ENSNamesWC;
         isActive = isActiveWC;
+        provider = providerWC;
     }
    
     
