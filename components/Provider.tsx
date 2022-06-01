@@ -18,8 +18,7 @@ function getName(connector: Connector) {
 const connectors: [MetaMask | WalletConnect | CoinbaseWallet, Web3ReactHooks][] = [
   [metaMask, metaMaskHooks],
   [walletConnect, walletConnectHooks],
-  [coinbaseWallet, coinbaseWalletHooks],
-  [network, networkHooks],
+  [coinbaseWallet, coinbaseWalletHooks]
 ]
 
 function Child() {
