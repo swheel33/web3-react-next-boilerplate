@@ -13,6 +13,8 @@ export default function DApp({chainId, accounts, error, isActivating, isActive, 
     ENSNames: string[]
 }) {
 
+    const signer = provider.getSigner();
+
     return (
         <div>
             {isActive && <Button>{ENSNames[0] ? ENSNames[0] : truncateEthAddress(accounts[0])}</Button>}
