@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react"
+import { Tag} from "@chakra-ui/react"
 import { Web3Provider } from "@ethersproject/providers"
 import truncateEthAddress from 'truncate-eth-address'
 
@@ -17,7 +17,7 @@ export default function DApp({chainId, accounts, error, isActivating, isActive, 
 
     return (
         <div>
-            {isActive && <Button>{ENSNames[0] ? ENSNames[0] : truncateEthAddress(accounts[0])}</Button>}
+            {isActive && <Tag size='lg'>{ENSNames[0] ? ENSNames[0] : truncateEthAddress(accounts[0])}</Tag>}
         </div>
     )
 }
