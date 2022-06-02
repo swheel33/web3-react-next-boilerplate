@@ -18,7 +18,7 @@ export default function MetaMaskConnect() {
     useEffect(() => {
         void metaMask.connectEagerly()
     }, [])
-    
+
     
     return (
         <Button onClick={() => metaMask.activate()}>
