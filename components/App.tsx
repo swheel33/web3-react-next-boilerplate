@@ -1,8 +1,7 @@
-import { Box } from '@chakra-ui/react';
 import { useEffect, useState } from 'react'
-import { hooks as metamaskHooks, metaMask } from '../connectors/metaMask'
-import { hooks as coinbaseWalletHooks, coinbaseWallet } from '../connectors/coinbaseWallet'
-import { hooks as walletConnectHooks, walletConnect} from '../connectors/walletConnect'
+import { hooks as metamaskHooks} from '../connectors/metaMask'
+import { hooks as coinbaseWalletHooks } from '../connectors/coinbaseWallet'
+import { hooks as walletConnectHooks } from '../connectors/walletConnect'
 import ConnectModal from './ConnectModal';
 import MetamaskDApp from './MetamaskDApp';
 import CoinbaseWalletDApp from './CoinbaseWalletDApp';
