@@ -5,7 +5,6 @@ import type { Connector } from '@web3-react/types'
 import { WalletConnect } from '@web3-react/walletconnect'
 import { coinbaseWallet, hooks as coinbaseWalletHooks } from '../connectors/coinbaseWallet'
 import { hooks as metaMaskHooks, metaMask } from '../connectors/metaMask'
-import { hooks as networkHooks, network } from '../connectors/network'
 import { hooks as walletConnectHooks, walletConnect } from '../connectors/walletConnect'
 
 function getName(connector: Connector) {
